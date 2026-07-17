@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Technical metadata configuration for the browser engine -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Morales | Portfolio</title>
+    
+    <!-- External stylesheet blueprint connection -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Core functional application script linked with a defer block -->
+    <!-- 'defer' ensures the script executes only after the full HTML layout is parsed -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Primary overarching application dashboard title heading -->
+    <h1>Portfolio</h1> 
+
+    <!-- Contextual platform introduction text component -->
+    <div id="intro">
+        <p>Welcome to my portfolio website. This space showcases my technical proficiencies, engineering projects, and development experience. Explore the tabs to review my work, and use the contact panel to get in touch.</p>
+    </div> 
+
+    <!-- Application menu navigation system -->
+    <!-- Triggers custom JavaScript state tracking events upon element selection clicks -->
+    <nav class="tabs"> 
+        <h2 onclick="showTab('about')">About Me</h2>
+        <h2 onclick="showTab('skills')">Skills</h2>
+        <h2 onclick="showTab('projects')">Projects</h2>
+        <h2 onclick="showTab('contact')">Contact</h2>
+    </nav>
+
+    <!-- Structural grid main view container hosting hidden application sub-cards -->
+    <main class="tab-contents"> 
+
+        <!-- SECTION A: Personal summary profile card -->
+        <section id="about" class="content-panel"> 
+            <p>Hi, I'm Kevin Morales, a software engineer based in Miami, FL. Ever since I discovered computer science, it has been a core passion of mine. I love breaking down complex problems and turning them into a puzzle that is just waiting to be solved. I approach every challenge with curiosity and excitement, taking pride in bringing ideas to life through clean code. My ultimate ambition is to create the next-generation technologies that will change our way of life.</p> 
+        </section>
+
+        <!-- SECTION B: Dynamically populated technical skills panel -->
+        <!-- Populates arrays read directly from 'skills.json' database documents via JS fetch -->
+        <section id="skills" class="content-panel"> 
+            <ul> </ul> 
+        </section>
+
+        <!-- SECTION C: Dynamically populated project portfolio cards -->
+        <!-- Populates project objects read directly from 'projects.json' database documents via JS fetch -->
+        <section id="projects" class="content-panel"> 
+            <ul> </ul> 
+        </section>
+
+        <!-- SECTION D: Communication matrix contact interface sheet -->
+        <section id="contact" class="content-panel"> 
+            <p>If you would like to get in touch with me, please feel free to reach out via email or connect with me on social platforms.</p> 
+            <ul> 
+                <!-- EMAIL DISTRIBUTION LAYER INTERFACE -->
+                <li> 
+                    <span class="platform-label">Email:</span> 
+                    <a href="mailto:kevinwmoralesdelgado@gmail.com" id="email-link">kevinwmoralesdelgado@gmail.com</a> 
+                    <button class="copy-btn" onclick="copyTextToClipboard('email-link', 'email-toast')" title="Copy to clipboard"> 
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"> 
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect> 
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path> 
+                        </svg> 
+                    </button> 
+                    <span id="email-toast" class="toast-hidden">Copied!</span> 
+                </li> 
+
+                <!-- GITHUB DEVELOPMENT LINK ROUTE -->
+                <li> 
+                    <span class="platform-label">GitHub:</span> 
+                    <a href="https://github.com/KevinWMoralesDelgado" target="_blank" rel="noopener noreferrer" id="github-link">github.com/KevinWMoralesDelgado</a> 
+                    <button class="copy-btn" onclick="copyTextToClipboard('github-link', 'github-toast')" title="Copy to clipboard"> 
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"> 
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect> 
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path> 
+                        </svg> 
+                    </button> 
+                    <span id="github-toast" class="toast-hidden">Copied!</span> 
+                </li> 
+
+                <!-- LINKEDIN PLATFORM LINK ROUTE -->
+                <li> 
+                    <span class="platform-label">LinkedIn:</span> 
+                    <!-- FIXED: Points directly to your true deep profile URL endpoint -->
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" id="linkedin-link">linkedin.com/in/kevin-morales-07a23b3a5</a> 
+                    <button class="copy-btn" onclick="copyTextToClipboard('linkedin-link', 'linkedin-toast')" title="Copy to clipboard"> 
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"> 
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect> 
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path> 
+                        </svg> 
+                    </button> 
+                    <span id="linkedin-toast" class="toast-hidden">Copied!</span> 
+                </li> 
+
+                <!-- REPLIT CODE ENVIRONMENT LAB LINK ROUTE -->
+                <li> 
+                    <span class="platform-label">Replit:</span> 
+                    <a href="https://replit.com/@KevinWMorales" target="_blank" rel="noopener noreferrer" id="replit-link">replit.com/@KevinWMorales</a> 
+                    <button class="copy-btn" onclick="copyTextToClipboard('replit-link', 'replit-toast')" title="Copy to clipboard"> 
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"> 
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect> 
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path> 
+                        </svg> 
+                    </button> 
+                    <span id="replit-toast" class="toast-hidden">Copied!</span> 
+                </li> 
+
+                <!-- TELEPHONY COMMUNICATION ROUTE (STATIC RAW OUTPUT DISPLAY) -->
+                <li> 
+                    <span class="platform-label">Phone:</span> 
+                    <span class="phone-display">+1 (305) 857-8161</span> 
+                </li> 
+            </ul> 
+        </section> 
+    </main> 
+</body>
+</html>

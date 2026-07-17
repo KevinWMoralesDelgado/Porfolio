@@ -1,0 +1,234 @@
+/* ========================================== 1. GLOBAL PAGE SETUP (TECH DARK THEME) ========================================== */ 
+body { 
+  background-color: #0d1117; 
+  color: #c9d1d9; 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; 
+  margin: 0; 
+  padding: 20px; 
+  box-sizing: border-box; 
+  background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px); 
+  background-size: 24px 24px; 
+} 
+
+h1 { 
+  color: #ffffff; 
+  text-align: center; 
+  font-size: 2.5rem; 
+  margin-top: 20px; 
+  letter-spacing: -0.5px; 
+} 
+
+#intro { 
+  text-align: center; 
+  max-width: 600px; 
+  margin: 0 auto 30px auto; 
+  color: #8b949e; 
+  font-size: 1.1rem; 
+  line-height: 1.6; 
+} 
+
+/* ========================================== 2. HORIZONTAL TAB NAVIGATION SYSTEM ========================================== */ 
+.tabs { 
+  display: flex; 
+  width: 100%; 
+  justify-content: space-around; 
+  align-items: center; 
+  margin-bottom: 25px; 
+  box-sizing: border-box; 
+  border-bottom: 1px solid #21262d; 
+  padding-bottom: 10px; 
+} 
+
+/* 👇 UPDATED SELECTOR: Fixed from .tabs h1 to match the clean semantic h2 elements */ 
+.tabs h2 { 
+  cursor: pointer; 
+  margin: 0; 
+  padding: 10px 15px; 
+  font-size: 1.2rem; 
+  color: #8b949e; 
+  user-select: none; 
+  border-bottom: 2px solid transparent; 
+  transition: all 0.2s ease-in-out; 
+} 
+
+/* 👇 UPDATED SELECTOR */ 
+.tabs h2:hover { 
+  color: #58a6ff; 
+  text-shadow: 0 0 10px rgba(88, 166, 255, 0.5); 
+} 
+
+/* 👇 UPDATED SELECTOR */ 
+.tabs h2.active-tab { 
+  color: #58a6ff; 
+  border-bottom: 2px solid #58a6ff; 
+  text-shadow: 0 0 10px rgba(88, 166, 255, 0.4); 
+} 
+
+/* ========================================== 3. TAB CONTENT PANEL & COMPONENT CONTAINERS ========================================== */ 
+.tab-contents .content-panel { 
+  display: none; 
+} 
+
+.tab-contents { 
+  display: flex; 
+  justify-content: center; 
+  width: 100%; 
+  margin-top: 15px; 
+} 
+
+/* Base styles for your visible tech dashboard box */ 
+.tab-contents .content-panel.active { 
+  display: block; 
+  width: 90%; 
+  max-width: 600px; 
+  background-color: #161b22; 
+  border: 1px solid #30363d; 
+  color: #e6edf3; 
+  padding: 25px 35px; 
+  border-radius: 6px; 
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45); 
+  /* Default opening transition settings */ 
+  animation: fadeIn 0.4s ease-out forwards; 
+} 
+
+/* NEW CSS CLASS FOR THE CLOSING STATE ANIMATION EFFECT */ 
+.tab-contents .content-panel.active.fade-out { 
+  /* Overrides the opening transition to play the closing blueprint instead */ 
+  animation: fadeOut 0.3s ease-in forwards; 
+} 
+
+/* ========================================== 4. INNER LIST PLACEMENTS & HYPERLINK OVERRIDES ========================================== */ 
+.content-panel ul { 
+  padding-left: 20px; 
+  line-height: 1.8; 
+} 
+
+.content-panel li { 
+  margin-bottom: 12px; 
+  display: flex; 
+  align-items: center; 
+  flex-wrap: wrap; 
+} 
+
+/* Fixed spacing label block structure for aligning row platform keys */ 
+.platform-label { 
+  font-weight: bold; 
+  width: 75px; 
+  color: #8b949e; 
+  display: inline-block; 
+} 
+
+.content-panel a { 
+  color: #58a6ff; 
+  text-decoration: none; 
+  font-weight: 600; 
+  transition: color 0.2s ease; 
+} 
+
+.content-panel a:hover { 
+  color: #1f6feb; 
+  text-decoration: underline; 
+} 
+
+/* Styles the static phone text layout to match your dashboard color rules */ 
+.phone-display { 
+  color: #e6edf3; 
+  font-weight: 500; 
+} 
+
+/* ========================================== 5. SKILLS CATEGORIES & PROJECTS UPDATES ========================================== */ 
+/* Styled subtitles grouping Frontend vs Backend frameworks */ 
+.skills-category-title { 
+  color: #8b949e; 
+  font-size: 0.95rem; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  margin-top: 15px; 
+  margin-bottom: 8px; 
+  border-bottom: 1px dashed #30363d; 
+  padding-bottom: 4px; 
+  width: 100%; 
+} 
+
+/* Forces each project row container to display linearly as a stack block */ 
+.project-card-item { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  margin-bottom: 14px; 
+  width: 100%; 
+} 
+
+/* Layout container managing text formatting blocks */ 
+.project-content-block { 
+  line-height: 1.6; 
+  width: 100%; 
+} 
+
+/* Targets the inline parenthetical technology strings */ 
+.project-content-block em { 
+  color: #8b949e; /* Elegant tech gray color rule for items inside the parenthesis */ 
+  font-style: italic; 
+} 
+
+/* ========================================== 6. CLIPBOARD COPY BUTTON & ALERT TOASTS ========================================== */ 
+.copy-btn { 
+  background-color: transparent; 
+  border: none; 
+  color: #8b949e; 
+  padding: 6px; 
+  margin-left: 4px; 
+  border-radius: 4px; 
+  cursor: pointer; /* Modifies interaction triggers to standard clickable hands */
+  display: inline-flex; /* Couples buttons tightly within sentence structures */
+  align-items: center; /* Center aligns layout icons inside borders */
+  justify-content: center; /* Centers horizontal alignments for nested graphical structures */
+  transition: all 0.2s ease-in-out; /* Standard transitions for styling responsiveness */
+} 
+
+.copy-btn:hover { 
+  background-color: rgba(255, 255, 255, 0.05); /* Adds a faint gray bubble tint behind buttons on hover */
+  color: #58a6ff; /* Shifts copy icons into blue visual themes */
+} 
+
+/* The small success text notification styling wrapper */ 
+[id$="-toast"] { 
+  margin-left: 10px; /* Keeps alerts spaced away from copy triggers */
+  font-size: 0.85rem; /* Reduces message size to fit neatly inside rows */
+  color: #56d364; /* Soft tech green for valid successful notifications */
+  font-weight: 500; /* Increases weight slightly to maintain high legibility */
+  transition: opacity 0.2s ease-in-out; /* Sets up smooth opacity fade animations */
+} 
+
+.toast-hidden { 
+  opacity: 0; /* Fully drops visual tracking properties */
+  visibility: hidden; /* Tells browsers to drop pointers and screen reading interactions */
+} 
+
+.toast-visible { 
+  opacity: 1; /* Sets alpha transparency to fully visible display levels */
+  visibility: visible; /* Confirms visibility paths are accessible across layout engines */
+} 
+
+/* ========================================== 7. KEYFRAMES ANIMATION BLUEPRINTS ========================================== */ 
+@keyframes fadeIn { 
+  from { 
+    opacity: 0; /* Panel starts completely invisible */
+    transform: translateY(10px); /* Panel starts shifted 10px downwards */
+  } 
+  to { 
+    opacity: 1; /* Panel fades into full opacity visibility */
+    transform: translateY(0); /* Panel slides smoothly up into standard layout positions */
+  } 
+} 
+
+@keyframes fadeOut { 
+  from { 
+    opacity: 1; /* Panels begin at maximum opacity values */
+    transform: translateY(0); /* Elements start in standard resting position coordinates */
+  } 
+  to { 
+    opacity: 0; /* Transitions entirely out into absolute invisibility blocks */
+    transform: translateY(10px); /* Slides the elements out downwards by 10 pixels */
+  } 
+}
