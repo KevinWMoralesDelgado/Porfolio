@@ -2,5 +2,17 @@
   {
     "name": "Python",
     "category": "Backend"
+  },
+  {
+    "name": "HTML",
+    "category": "Frontend"
+  },
+  {
+    "name": "CSS",
+    "category": "Frontend"
+  },
+  {
+    "name": "JavaScript",
+    "category": "Backend"
   }
 ]
