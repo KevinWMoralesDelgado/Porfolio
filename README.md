@@ -1,16 +1,15 @@
-# Personal Web Portfolio
+# Personal Portfolio Website
 
-A dynamic, lightweight personal portfolio website built with semantic HTML5, custom CSS, and modern JavaScript. Designed to showcase technical skills, software engineering projects, and contact information through a tabbed single-page layout.
+A simple, fast, and modern personal portfolio website. Built with clean HTML, custom CSS, and vanilla JavaScript to showcase my skills, projects, and contact info in a tabbed layout.
 
 ---
 
-## 📌 Overview
+## 🌟 Features
 
-This project serves as an interactive hub for my engineering background, featuring:
-* **Interactive Tab Navigation:** Smooth, single-page navigation across profile sections using custom JavaScript state management.
-* **Dynamic Data Rendering:** Asynchronously populates technical skills and project cards by fetching records directly from JSON endpoints (`skills.json` and `projects.json`).
-* **One-Click Contact Clipboard:** Interactive contact panel featuring built-in SVG copy buttons with custom toast notifications for quick clipboard copying.
-* **Clean & Semantic HTML5:** Accessible layout structured with semantic elements (`<nav>`, `<main>`, `<section>`) and deferred script loading for optimal page performance.
+* **Dark Mode Design:** A clean, dark-themed layout that is easy on the eyes.
+* **Smooth Tab Switching:** Easily click between "About Me", "Skills", "Projects", and "Contact" tabs with smooth fade animations.
+* **Dynamic Content:** Automatically loads skills and project information from JSON files (`skills.json` and `projects.json`).
+* **One-Click Copy Buttons:** Quickly copy email address and social links to your clipboard with a single click and a "Copied!" notification.
 
 ---
 
