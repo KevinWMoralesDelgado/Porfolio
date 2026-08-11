@@ -8,5 +8,13 @@
       "CSS",
       "JavaScript"
     ]
+  },
+  {
+    "title": "WebVids Scraper",
+    "description": "A lightweight Python utility that extracts live flight data from Miami International Airport's (MIA)",
+    "link": "https://github.com/KevinWMoralesDelgado/WebVids-Scraper",
+    "tags": [
+      "Python"
+    ]
   }
 ]
