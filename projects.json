@@ -16,5 +16,13 @@
     "tags": [
       "Python"
     ]
+  },
+  {
+    "title": "PDF to Speech",
+    "description": "Converts PDF documents into spoken MP3 audio files",
+    "link": "https://github.com/KevinWMoralesDelgado/PDF-Audio",
+    "tags": [
+      "Python"
+    ]
   }
 ]
