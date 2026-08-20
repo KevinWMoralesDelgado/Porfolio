@@ -12,7 +12,8 @@ A simple, fast, and modern personal portfolio website. Built with clean HTML, cu
 * **One-Click Copy Buttons:** Quickly copy email address and social links to your clipboard with a single click and a "Copied!" notification.
 
 ---
+## 🔒 License & Copyright
 
-## 👤 Author
+This project is free to download, use, and modify for personal and educational purposes. **Commercial use is strictly prohibited.**
 
-* **Author:** Kevin M
+© 2026 Kevin Morales
